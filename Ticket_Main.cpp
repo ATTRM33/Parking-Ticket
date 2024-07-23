@@ -4,11 +4,20 @@
 
 #include <iostream>
 #include "ParkedCar.h"
+#include "ParkingMeter.h"
+#include "ParkingTicket.h"
+#include "PoliceOfficer.h"
 #include "Time.h"
 
 using namespace std;
 
 int main() {
-	Time time(1, 32, 58);
-	cout << time.getTimeInMinutes() << " minutes" << endl;
+	Time myPurchasedTime(1, 35);
+	ParkedCar myCar("Ford", "F-150", "Black", "P01FR", myPurchasedTime );
+	ParkingMeter meter;
+	Time meterTime(0, 60);
+	meter.setMinPurchased(meterTime);
+
+	
+	
 };
